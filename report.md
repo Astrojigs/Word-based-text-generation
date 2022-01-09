@@ -68,17 +68,17 @@ def generate_text(seed_text,next_words,model):
 generate_text("B",40,model_1)
 ```
 
-```
+
 'B maps aims to predict when and where traffic jams will occur and allow its user to avoid them and find the shortest route to their destination attack as high target data dimensionsâ€”data came in the public during the development of'
-```
+
 
 ### 2.
 ```
 generate_text('Great',30,model_1)
 ```
 
-```
+
 "Great intelligent technologies to analyze natural language patterns to discern degrees of loneliness in older adults circuits dystrophy in layman's terms use machine learning to discover new sequences to boost drug"
-```
+
 
 Although these "new Ideas" are fun to read, the model has read through the files and is now able to generate new ideas ('GOAL') with less grammatical errors.
