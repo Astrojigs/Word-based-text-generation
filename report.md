@@ -38,3 +38,5 @@ model.add(Dense(total_words, activation='softmax'))
 
 model.compile(loss='categorical_crossentropy', optimizer='adam')
 ```
+
+![]('Model_plot.png')
