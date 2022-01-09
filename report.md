@@ -40,3 +40,45 @@ model.compile(loss='categorical_crossentropy', optimizer='adam')
 ```
 
 ![Model_plot](Model_plot.png)
+
+# Post Fitting models
+I trained the model for 126 epochs, with each epoch taking 4 minutes to complete.
+
+# Results:
+
+I created a function where the model will predict the occurring words after the given seed text.
+```
+def generate_text(seed_text,next_words,model):
+    for _ in range(next_words):
+        token_list = tokenizer.texts_to_sequences([seed_text])[0]
+        token_list = pad_sequences([token_list], maxlen=max_sequence_len - 1, padding='pre')
+        predicted = model.predict_classes(token_list, verbose=0)
+        output_word = ""
+        for word, index in tokenizer.word_index.items():
+            if index == predicted:
+                output_word = word
+                break
+        seed_text += ' ' + output_word
+    return seed_text
+```
+
+## Few Outputs.
+### 1.
+```
+generate_text("B",40,model_1)
+```
+
+```
+'B maps aims to predict when and where traffic jams will occur and allow its user to avoid them and find the shortest route to their destination attack as high target data dimensionsâ€”data came in the public during the development of'
+```
+
+### 2.
+```
+generate_text('Great',30,model_1)
+```
+
+```
+"Great intelligent technologies to analyze natural language patterns to discern degrees of loneliness in older adults circuits dystrophy in layman's terms use machine learning to discover new sequences to boost drug"
+```
+
+Although these "new Ideas" are fun to read, the model has read through the files and is now able to generate new ideas ('GOAL') with less grammatical errors.
