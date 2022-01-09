@@ -28,6 +28,8 @@ The testing is currently limited to the data the algorithm has available to it b
 == COMMENTS
 The real world application of this machine learning algorithm is fascinating, and the results seem impressive with it being able to correctly guess who would test positive twice as much as how Greece selected for tests prior to the alogrithm's implimentation. It does raise ethical concerns as it is selecting people to have an intrusive test done on them from a profile about them however.
 ```
+## Note:
+**For the purposes of efficiency, I'll only be choosing the 'GOALS' for each file.**
 
 # Extraction of Data:
 I have used only 800 text files for training purposes due to hardware limit on my computer.
