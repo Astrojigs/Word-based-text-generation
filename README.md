@@ -6,7 +6,7 @@ Neural network model generates text similar to the files given in the data.
 # Objective:
 To generate text (new ideas) based on the files provided.
 
-For example: the file include the data in following format:
+For example: the files include the data in following format:
 
 ```
 == SOURCE
