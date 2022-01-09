@@ -20,4 +20,21 @@ for i in range(len(data_file_names)):
         corpus.append(open(full_path).read()[open(full_path,'r').read().find('GOAL') + 4:open(full_path,'r').read().find('== DATA')].replace('\n',''))
     except:
         pass
+
+# Minimizing corpus size:
+corpus = corpus[:800]
+```
+
+# Model:
+I have use a Bidirectional LSTM network for the purposes of generating new text.
+```
+# Creating model
+model = tf.keras.models.Sequential()
+model.add(Embedding(input_dim=total_words, output_dim=250, input_length=max_sequence_len - 1))
+model.add(Bidirectional(LSTM(150,return_sequences=True)))
+model.add(Bidirectional(LSTM(150,return_sequences=True)))
+model.add(Bidirectional(LSTM(100)))
+model.add(Dense(total_words, activation='softmax'))
+
+model.compile(loss='categorical_crossentropy', optimizer='adam')
 ```
