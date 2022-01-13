@@ -1,5 +1,7 @@
 ##########
-Link to REPO (21251312)
+Name: Jigar Patel
+(ID - 21251312)
+Link to REPO
 ##########
 
 https://gitlab.cs.nuim.ie/p220021/Word-based-text-generation
